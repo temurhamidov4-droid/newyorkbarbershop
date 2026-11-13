@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEW YORK BARBERSHOP — Ташкент</title>
+<meta name="description" content="New York Barbershop — барбершоп в Ташкенте, Юнусабад. Мужские стрижки, борода, уход. Запись онлайн.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="NEW YORK BARBERSHOP — Ташкент">
+<meta property="og:description" content="Мужские стрижки, борода и уход в Юнусабаде. Рейтинг 5.0 на Яндекс Картах.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;
+  --paper:#f6f4ef;
+  --navy:#14234f;
+  --navy-2:#0d1838;
+  --red:#d3153b;
+  --ink:#1a1f33;
+  --muted:#6b7089;
+  --line:rgba(20,35,79,.14);
+  --serif:'Playfair Display',Georgia,serif;
+  --cond:'Oswald','Arial Narrow',sans-serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--red)}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:48px;width:auto}
+.brand-text{display:flex;flex-direction:column;line-height:1}
+.brand-text b{font-family:var(--cond);font-weight:700;font-size:22px;letter-spacing:.04em;color:var(--red)}
+.brand-text span{font-family:var(--cond);font-size:11px;letter-spacing:.32em;color:var(--navy);margin-top:4px}
+nav ul{display:flex;align-items:center;gap:30px;list-style:none}
+nav a{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--navy);transition:color .2s}
+nav a:hover{color:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--red);background:var(--red);color:#fff;transition:.25s;cursor:pointer}
+.btn:hover{background:var(--navy);border-color:var(--navy)}
+.btn.ghost{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn.ghost:hover{background:var(--navy);color:#fff}
+nav .btn{padding:11px 20px;color:#fff}
+nav .btn:hover{color:#fff}
+.burger{display:none;background:none;border:0;font-size:26px;color:var(--navy);cursor:pointer}
+
+/* hero */
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:130px 0 90px;position:relative;background:
+  radial-gradient(1000px 500px at 50% 0,rgba(211,21,59,.06),transparent 70%),
+  linear-gradient(180deg,#fff,var(--paper))}
+.hero::before,.hero::after{content:"";position:absolute;left:0;right:0;height:10px;
+  background:repeating-linear-gradient(-45deg,var(--red) 0 22px,#fff 22px 44px,var(--navy) 44px 66px,#fff 66px 88px)}
+.hero::before{top:74px}
+.hero::after{bottom:0}
+.eyebrow{font-family:var(--cond);font-size:13px;letter-spacing:.42em;color:var(--red);text-transform:uppercase}
+.hero h1{font-family:var(--cond);font-weight:700;font-size:clamp(54px,12vw,150px);line-height:.95;letter-spacing:.02em;color:var(--red);margin:18px 0 0}
+.hero h1 span{display:block;font-size:.34em;letter-spacing:.5em;color:var(--navy);font-weight:500;margin-top:10px;padding-left:.5em}
+.hero p{max-width:640px;margin:34px auto 0;font-size:15px;letter-spacing:.1em;color:var(--navy);text-transform:uppercase;line-height:2}
+.hero .cta{margin-top:38px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-foot{margin-top:56px;font-family:var(--cond);letter-spacing:.3em;font-size:12px;color:var(--muted)}
+.rating{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:8px 18px;border:1px solid var(--line);background:#fff;font-size:13px;color:var(--navy)}
+.rating b{color:var(--red);font-size:16px;font-family:var(--cond);letter-spacing:.05em}
+
+/* sections */
+section{padding:110px 0}
+.kicker{font-family:var(--cond);font-size:12px;letter-spacing:.4em;color:var(--red);text-transform:uppercase;margin-bottom:14px}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(34px,5vw,58px);line-height:1.12;color:var(--navy);margin-bottom:20px}
+.lead{max-width:560px;color:var(--muted);font-size:16px}
+.center{text-align:center}
+.center .lead{margin-inline:auto}
+
+/* instagram */
+.insta{background:var(--navy);color:#fff;text-align:center}
+.insta h2{color:#fff}
+.insta .kicker{color:#ff7a93}
+.insta .lead{color:rgba(255,255,255,.72)}
+.insta-card{margin:44px auto 0;max-width:520px;border:1px solid rgba(255,255,255,.2);padding:34px;display:flex;align-items:center;gap:22px;text-align:left}
+.insta-logo{flex:none;width:76px;height:76px;border-radius:50%;background:#fff;display:grid;place-items:center;overflow:hidden}
+.insta-logo img{width:62px}
+.insta-logo span{font-family:var(--cond);font-weight:700;color:var(--red);font-size:22px}
+.insta-card small{display:block;font-family:var(--cond);letter-spacing:.25em;font-size:11px;color:#ff7a93}
+.insta-card strong{display:block;font-size:19px;margin:4px 0 12px;font-weight:500}
+.insta-card a.btn{padding:10px 18px}
+
+/* about */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about .split{grid-template-columns:1fr;max-width:760px;text-align:center}
+.about p{color:#454a63;margin-bottom:18px;max-width:620px;margin-inline:auto}
+.sign{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--red);margin:26px 0 6px}
+.small-caps{font-family:var(--cond);letter-spacing:.3em;font-size:11px;color:var(--muted)}
+
+/* values */
+.values{background:var(--paper)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px}
+.card{background:#fff;border:1px solid var(--line);padding:44px 34px;position:relative;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:var(--red);box-shadow:0 18px 40px -22px rgba(20,35,79,.35)}
+.num{font-family:var(--serif);font-size:44px;color:var(--red);font-style:italic;line-height:1}
+.card h3{font-family:var(--cond);font-weight:600;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin:18px 0 10px}
+.card p{color:var(--muted);font-size:15px}
+
+/* services */
+.list{margin-top:54px;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:70px 1fr auto;gap:24px;align-items:center;padding:30px 8px;border-bottom:1px solid var(--line);transition:.25s}
+.row:hover{background:var(--paper);padding-left:22px}
+.row .n{font-family:var(--cond);color:var(--red);letter-spacing:.2em}
+.row h3{font-family:var(--cond);font-weight:600;font-size:26px;letter-spacing:.06em;text-transform:uppercase;color:var(--navy)}
+.row p{color:var(--muted);font-size:14px}
+.row .price{font-family:var(--serif);font-style:italic;color:var(--navy);font-size:18px}
+.note{margin-top:28px;color:var(--muted);font-size:14px}
+.services .cta{margin-top:30px}
+
+/* quote */
+.quote{background:linear-gradient(135deg,var(--navy-2),var(--navy));color:#fff;text-align:center;position:relative;overflow:hidden}
+.quote::before{content:"NY";position:absolute;font-family:var(--cond);font-weight:700;font-size:min(46vw,520px);color:rgba(255,255,255,.04);left:50%;top:50%;transform:translate(-50%,-50%);line-height:1;pointer-events:none}
+.quote h2{color:#fff;position:relative}
+.quote h2 em{color:#ff6b88}
+.quote p{position:relative;letter-spacing:.22em;font-size:13px;text-transform:uppercase;color:rgba(255,255,255,.78)}
+
+/* contacts */
+.contacts .split{align-items:start}
+.info{margin-top:30px;border-top:1px solid var(--line)}
+.info div{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.info dt,.info .k{font-family:var(--cond);letter-spacing:.25em;font-size:12px;color:var(--red);text-transform:uppercase;padding-top:3px}
+.info a:hover{color:var(--red)}
+.maps{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}
+.maps a{padding:10px 16px;border:1px solid var(--navy);font-family:var(--cond);letter-spacing:.2em;font-size:12px;color:var(--navy);transition:.2s}
+.maps a:hover{background:var(--navy);color:#fff}
+.mapbox{border:1px solid var(--line);aspect-ratio:1/1.05;width:100%;filter:grayscale(.25)}
+.mapbox iframe{width:100%;height:100%;border:0}
+
+footer{background:var(--navy-2);color:rgba(255,255,255,.75);padding:56px 0 34px;text-align:center}
+footer .fb{font-family:var(--cond);font-weight:700;font-size:26px;letter-spacing:.06em;color:#fff}
+footer .fb span{color:#ff6b88}
+footer ul{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;list-style:none;margin:22px 0 26px}
+footer a{font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+footer a:hover{color:#ff6b88}
+footer small{display:block;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.45)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .burger{display:block}
+  nav ul{position:absolute;top:74px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--line);display:none;padding:10px 20px 22px}
+  nav ul.open{display:flex}
+  nav li{width:100%;padding:14px 0;border-bottom:1px solid var(--line)}
+  nav li:last-child{border:0;padding-top:20px}
+  .split{grid-template-columns:1fr;gap:56px}
+  .grid3{grid-template-columns:1fr}
+  .row{grid-template-columns:44px 1fr;}
+  .row .price{grid-column:2}
+  .insta-card{flex-direction:column;text-align:center}
+  section{padding:80px 0}
+}
+@media(prefers-reduced-motion:reduce){.rv{transition:none;opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="New York Barbershop">
+      <span class="brand-text"><b>NEW YORK</b><span>BARBERSHOP</span></span>
+    </a>
+    <nav>
+      <ul id="menu">
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#values">Философия</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+        <li><a class="btn" href="https://t.me/hairman" target="_blank" rel="noopener">Записаться</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Tashkent · Yunusabad</div>
+      <h1>NEW YORK<span>BARBERSHOP</span></h1>
+      <p>Чёткие линии. Мужской характер.<br>Стрижка, после которой хочется возвращаться.</p>
+      <div class="cta">
+        <a class="btn" href="https://t.me/hairman" target="_blank" rel="noopener">Записаться онлайн ↗</a>
+        <a class="btn ghost" href="#about">О барбершопе</a>
+      </div>
+      <div class="rating"><b>5.0</b> рейтинг на Яндекс Картах · 204 оценки</div>
+      <div class="hero-foot">ЮНУСАБАД · 11-КВАРТАЛ, 4 · TASHKENT</div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="insta" id="instagram">
+    <div class="wrap rv">
+      <div class="kicker">Follow our world</div>
+      <h2>Мы в <em>Instagram.</em></h2>
+      <p class="lead">Наши работы, мастера и атмосфера New York Barbershop — смотрите и вдохновляйтесь.</p>
+      <div class="insta-card">
+        <div class="insta-logo"><span>NY</span></div>
+        <div>
+          <small>BARBERSHOP · TASHKENT</small>
+          <strong>@barbernyc_</strong>
+          <a class="btn" href="https://www.instagram.com/barbernyc_" target="_blank" rel="noopener">Открыть Instagram ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="wrap split">
+      <div class="rv">
+        <div class="kicker">The spirit of New York</div>
+        <h2>Больше, чем <em>просто стрижка.</em></h2>
+        <p>New York Barbershop — это мужское пространство в Юнусабаде, где работают чётко, быстро и с вниманием к деталям. Мы любим классику, но делаем стрижки, которые выглядят современно.</p>
+        <p>Опытные мастера подберут форму под ваш тип волос и образ жизни. Многие клиенты ходят к нам годами — и приводят друзей.</p>
+        <div class="sign">Your city. Your cut.</div>
+        <div class="small-caps">NEW YORK BARBERSHOP · TASHKENT</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values" id="values">
+    <div class="wrap">
+      <div class="center rv">
+        <div class="kicker">Our philosophy</div>
+        <h2>Три принципа. <em>Один стандарт.</em></h2>
+        <p class="lead">Качество, скорость и отношение к деталям — основа всего, что мы делаем.</p>
+      </div>
+      <div class="grid3">
+        <div class="card rv"><div class="num">I</div><h3>Craft</h3><p>Уважение к ремеслу барбера: чистые линии, точный fade, аккуратная работа с бородой.</p></div>
+        <div class="card rv"><div class="num">II</div><h3>Precision</h3><p>Внимание к каждой детали. Быстро, без лишней суеты и всегда с результатом, который держит форму.</p></div>
+        <div class="card rv"><div class="num">III</div><h3>Character</h3><p>Уверенный стиль и атмосфера, в которой комфортно с первого визита.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="rv">
+        <div class="kicker">Our services</div>
+        <h2>Искусство <em>деталей.</em></h2>
+        <p class="lead">Каждая услуга — это внимание к вашему образу и комфорту.</p>
+      </div>
+      <div class="list rv">
+        <div class="row"><div class="n">01</div><div><h3>Men's Haircut</h3><p>Мужская стрижка под ваш стиль</p></div><div class="price">По запросу</div></div>
+        <div class="row"><div class="n">02</div><div><h3>Beard Styling</h3><p>Моделирование и оформление бороды</p></div><div class="price">По запросу</div></div>
+        <div class="row"><div class="n">03</div><div><h3>Hair &amp; Beard</h3><p>Комплексный мужской образ</p></div><div class="price">По запросу</div></div>
+        <div class="row"><div class="n">04</div><div><h3>Care</h3><p>Уход и дополнительные процедуры</p></div><div class="price">По запросу</div></div>
+      </div>
+      <p class="note rv">Для уточнения стоимости и свободного времени свяжитесь с нами.</p>
+      <div class="cta rv"><a class="btn" href="https://t.me/hairman" target="_blank" rel="noopener">Узнать цены и записаться ↗</a></div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote">
+    <div class="wrap center rv">
+      <div class="kicker" style="color:#ff7a93">A different standard</div>
+      <h2>Style is <em>an attitude.</em></h2>
+      <p>Не следуй за трендами. Создавай свой стиль.</p>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="contacts" id="contacts">
+    <div class="wrap split">
+      <div class="rv">
+        <div class="kicker">Find your place</div>
+        <h2>Мы ждём <em>вас.</em></h2>
+        <p class="lead">Ваше место для безупречного стиля — в Юнусабаде, в самом сердце Ташкента.</p>
+        <div class="info">
+          <div><span class="k">Адрес</span><span>Ташкент, Юнусабадский район, 11-квартал, 4</span></div>
+          <div><span class="k">Телефон</span><a href="tel:+998909476699">+998 90 947 66 99</a></div>
+          <div><span class="k">Instagram</span><a href="https://www.instagram.com/barbernyc_" target="_blank" rel="noopener">@barbernyc_ ↗</a></div>
+          <div><span class="k">Telegram</span><a href="https://t.me/hairman" target="_blank" rel="noopener">@hairman ↗</a></div>
+        </div>
+        <div class="maps">
+          <a href="https://yandex.uz/maps/-/CXGSNVOH" target="_blank" rel="noopener">YANDEX MAPS ↗</a>
+          <a href="https://go.2gis.com/fifpc" target="_blank" rel="noopener">2GIS ↗</a>
+          <a href="https://maps.app.goo.gl/UD4g7cemBFTiMf5w8" target="_blank" rel="noopener">GOOGLE MAPS ↗</a>
+        </div>
+        <a class="btn" href="https://t.me/hairman" target="_blank" rel="noopener">Записаться на визит ↗</a>
+      </div>
+      <div class="mapbox rv">
+        <iframe title="New York Barbershop на карте" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=41.3685445,69.2915362&z=17&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fb"><span>NEW YORK</span> BARBERSHOP</div>
+    <ul>
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#values">Философия</a></li>
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#instagram">Instagram</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+      <li><a href="https://t.me/hairman" target="_blank" rel="noopener">Telegram ↗</a></li>
+    </ul>
+    <small>© NEW YORK BARBERSHOP · TASHKENT · SHARP CUTS. SOLID STYLE.</small>
+  </div>
+</footer>
+
+<script>
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
